@@ -1,0 +1,15 @@
+stdafx.h : 标准系统包含文件的包含文件，
+// 或是经常使用但不常更改的
+// 特定于项目的包含文件
+
+系统会自动把所需要include的头文件在stdafx.h中先include一下,这样,我们只需要直接include这个stdafx.h文件即可.因为同一个项目中的不同源文件CPP都包含相同的include文件,这样,为每个.CPP文件都重复include这些文件就显得很傻了。
+具体在stdafx.h中需要include什么头文件,取决于用户在AppWizard中的选择.
+比如:
+#include <afxwin.h>         // MFC core and standard components
+#include <afxext.h>          // MFC extensions
+#include <afxole.h>         // MFC OLE classes
+#include <afxodlgs.h>     // MFC OLE dialog classes
+#include <afxdisp.h>       // MFC Automation classes
+在生成stdafx.h头文件的同时,也生成了stdafx.cpp源文件,该源文件只包含#include "stdafx.h"语句
+
+在vs中新建项目时选择预编译头会自动生成stadfx.h
