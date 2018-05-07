@@ -1,0 +1,7 @@
+python2里面unicode和中文的转换问题
+
+在requsets里面response.text出现乱码,用response.encoding='utf-8'
+
+在re里面出现unicode，用一个迭代输出试试
+
+在bs4里面strings用str1.decode('unicode_escape')
